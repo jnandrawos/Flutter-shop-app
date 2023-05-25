@@ -6,7 +6,7 @@ class Cart extends ChangeNotifier {
   num total = 0;
   List<Product?> cartItems = [];
 
-  getSavedCart() async {
+  Future<void> getSavedCart() async {
     cartItems = await SharedPreferencesHelper.getCartItems();
     notifyListeners();
   }
