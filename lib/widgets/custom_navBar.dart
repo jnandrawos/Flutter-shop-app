@@ -28,7 +28,7 @@ class CustomNavBar extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, CartScreen.routeName);
+                  Navigator.pushNamed(context, CartScreen.routeName);
                 },
                 icon: const Icon(Icons.shopping_cart),
                 color: Colors.white,
