@@ -23,12 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _isInitialized = false;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
     _initializeData();
+    super.didChangeDependencies();
   }
 
-  Future<void> _initializeData() async {
+  _initializeData() async {
     if (!_isInitialized) {
       await Provider.of<Products>(context, listen: false).getSavedProducts();
       await Provider.of<Cart>(context, listen: false).getSavedCart();
